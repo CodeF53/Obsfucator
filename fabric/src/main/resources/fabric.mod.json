@@ -3,9 +3,9 @@
   "id": "${id}",
   "version": "${version}",
   "name": "${displayName}",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "Fixes ChatReporting by making everything you send and receive Obfuscated",
   "authors": [
-    "Me!"
+    "CodeF53#0241"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
@@ -14,17 +14,8 @@
   "license": "${license}",
   "icon": "assets/${id}/icon.png",
   "environment": "*",
-  "entrypoints": {
-    "main": [
-      "net.examplemod.fabric.ExampleModFabric"
-    ],
-    "preLaunch": [
-      "net.examplemod.fabric.PreLaunchSetup"
-    ]
-  },
   "mixins": [
-    "examplemod.mixins.json",
-    "examplemod-common.mixins.json"
+    "chatobfuscator-common.mixins.json"
   ],
   "depends": {
     "fabric": "*",

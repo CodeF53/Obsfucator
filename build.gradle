@@ -10,7 +10,8 @@ plugins {
 def mcVersionToAccessWidenerVersion = [
         "1.16.5": "1_19",
         "1.18.2": "1_19",
-        "1.19":   "1_19"
+        "1.19":   "1_19",
+        "1.19.1": "1_19"
 ]
 rootProject.ext.set("accessWideners", mcVersionToAccessWidenerVersion)
 
@@ -82,20 +83,6 @@ subprojects { p ->
 
         annotationProcessor "systems.manifold:manifold-preprocessor:${rootProject.manifold_version}"
 
-        // https://github.com/LlamaLad7/MixinExtras/wiki
-        if (p == project(":forge")) {
-            // TODO: Fix this when Architectury adds support for non mod jars (https://canary.discord.com/channels/792699517631594506/813076934740934665/1002712371728502794)
-//            addJar "com.github.LlamaLad7:MixinExtras:${rootProject.mixin_extras}"
-            shade "com.github.LlamaLad7:MixinExtras:${rootProject.mixin_extras}"
-        } else {
-            addJar "com.github.LlamaLad7:MixinExtras:${rootProject.mixin_extras}"
-        }
-        annotationProcessor("com.github.LlamaLad7:MixinExtras:${rootProject.mixin_extras}")
-        
-        
-        
-        
-        
         // Dev Env Optimizations
         //// https://www.cursemaven.com/
         //// https://docs.modrinth.com/docs/tutorials/maven/
@@ -116,7 +103,7 @@ subprojects { p ->
         }
 
         if (p == project(":forge")) {
-            if (rootProject.hasProperty("rubidium")) {
+            /*if (rootProject.hasProperty("rubidium")) {
                 modImplementation "curse.maven:rubidium-574856:${rootProject.rubidium}"
             }
             if (rootProject.hasProperty("smoothboot_forge")) {
@@ -128,7 +115,7 @@ subprojects { p ->
 //            }
             if (rootProject.hasProperty("starlight_forge")) {
                 modImplementation "curse.maven:starlight-forge-526854:${rootProject.starlight_forge}"
-            }
+            }*/
         }
     }
 

@@ -1,15 +1,15 @@
 modLoader = "javafml"
 loaderVersion = "[0,)"
-#issueTrackerURL = ""
+issueTrackerURL = "https://github.com/CodeF53/Obsfucator/issues"
 license = "${license}"
 
 [[mods]]
 modId = "${id}"
 version = "${version}"
 displayName = "${displayName}"
-authors = "Me!"
+authors = "CodeF53#0241"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+Fixes ChatReporting by making everything you send and receive Obfuscated
 '''
 #logoFile = ""
 
